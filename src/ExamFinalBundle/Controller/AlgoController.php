@@ -40,7 +40,7 @@ class AlgoController extends Controller
 
 
         $output = [];
-        foreach ($input as $value => $key) {
+        foreach ($input as $key => $value) {
 
                 if ($value[$key] <= 2) {
                     $output[$key][] = 2;
