@@ -18,18 +18,24 @@ class AlgoController extends Controller
         $tab = [];
         foreach ($string as $letters) {
             if (in_array($pattern, $tab)) {
-                $tab[$letters].+'av';
+                $tab[$letters] .= 'av';
             }
-            return implode("",$tab);
+            return implode(" ", $tab);
         }
     }
 
     // Exercice 2
     public function action($input)
     {
-        for($i = 1; $i<=count($input); $i++) {
-                $input[$i][1] = $input[$i][1] + 1;
+        foreach ($input as $int) {
+            foreach ($input as $int => $value) {
+                if ($input[$int] == 0) {
+                    $input[$int][$value] = 1;
+                } else {
+                    $input[$int][$value] += $input[$int][$value];
+                }
+                return $input;
             }
-            return $input;
+        }
     }
 }
