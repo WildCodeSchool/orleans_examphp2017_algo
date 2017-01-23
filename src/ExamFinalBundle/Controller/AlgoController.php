@@ -17,7 +17,7 @@ class AlgoController extends Controller
 
         for ($i = 0; $i <= count($tabString); $i++) {
             $j = $i - 1;
-            if (preg_match("#[aeiouy]#", $tabString[$i]) and preg_match("#[^aeiouy]#", $tabString[$j])) {
+            if (preg_match("[aeiouy]", $tabString[$i]) and preg_match("#[^aeiouy]#", $tabString[$j])) {
                 if ($i = count($tabString) and $tabString[$i] = 'e') {
                     $tabString[$i] = 'e';
                 } else
@@ -61,6 +61,8 @@ class AlgoController extends Controller
 
             }
         }
+
+        return $input;
 
     }
 }
