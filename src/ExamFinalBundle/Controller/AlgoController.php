@@ -14,15 +14,15 @@ class AlgoController extends Controller
     public function traduire($string)
     {
         $string = 'wild';
-        $vowels = array("a", "e", "i", "o", "u", "A", "E", "I", "O", "U");
+        $vowels = array("a", "e", "i", "o", "u","y", "A", "E", "I", "O", "U", "Y");
 
         //$result = str_replace($vowels,"av",$string);
         $result = '';
         $letters = str_split($string, 1);
         foreach ($letters as $letter) {
             if ($letter == $vowels) {
-                $letter .= 'av' . $letter;
-                $result .= $letter;
+                $letter = 'av' . $letter;
+
             }
 
         }
@@ -45,7 +45,7 @@ class AlgoController extends Controller
 
         foreach ($input55 as $key => $value) {
             if ($value == 1) {
-                $output55 = $value == 2;
+               $output55 =$value == 2;
             }
         }
 
