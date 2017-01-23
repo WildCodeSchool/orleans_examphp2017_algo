@@ -22,7 +22,7 @@ class AlgoController extends Controller
         {
             if (preg_match('/[aeiouy]{1}/', $voyelles))
             {
-                $resultat += array_merge($javanais, $caractères);
+               $resultat += ['av'.$voyelles];
             }
 
 
