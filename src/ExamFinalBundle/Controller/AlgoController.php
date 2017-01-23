@@ -121,8 +121,8 @@ class AlgoController extends Controller
 		                         array(0, 0, 0, 1, 1, 1, 0, 0, 0),
 	                         ))
                          };
-    	    echo action($input);
 
+	    echo $input;
     }
 
 
