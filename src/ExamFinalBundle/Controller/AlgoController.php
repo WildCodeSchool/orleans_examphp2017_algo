@@ -43,10 +43,10 @@ class AlgoController extends Controller
         foreach ($input as $key => $value) {
 
                 if ($value[$key] <= 2) {
-                    $output[$key][] = 2;
+                    $output[$key] = 2;
 
                 } else {
-                    $output[$key][] = 1;
+                    $output[$key] = 1;
                 }
 
         }
