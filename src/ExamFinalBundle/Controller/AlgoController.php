@@ -66,11 +66,15 @@ class AlgoController extends Controller
                         $row[count($row)-1] = 1;
                     }
                 }elseif ($cells == 0){
+                    $cells = 0;
 
                 }
             }
         }
-
+        return $output;
     }
+    // 1. décompser le tableau en lignes
+    // 2. pour chaque ligne, si la cellule est égale à 0 la cellule output sera égale à 0
+    //    si la cellule est égale à 1 la cellule output sera de 1 sauf si la précédente est restée inchangée elle sera alors de 2
+    // 3. le calcul ne peut être fait que si le nombre de row est supérieur à 3 sous condition que les cellules de cette ligne soient de 1
 }
-//for ($i=0; $i<10; $i++)
