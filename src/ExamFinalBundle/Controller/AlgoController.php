@@ -42,7 +42,7 @@ class AlgoController extends Controller
         for ($i = 1; $i <= 2; $i++){
             $result = str_replace($caract, $tab[0][$i], $input);
         }
-
+// le but était de passer la première clef du tableau et de remplacer la deuxieme par 2...
 
     }
 }
