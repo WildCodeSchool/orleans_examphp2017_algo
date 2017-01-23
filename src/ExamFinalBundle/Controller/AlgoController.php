@@ -38,7 +38,11 @@ class AlgoController extends Controller
     public function action($input)
     {
         $caract = "1";
-        $result = str_replace($caract, "2", $string);
-      
+        $tab = array($input);
+        for ($i = 1; $i <= 2; $i++){
+            $result = str_replace($caract, $tab[0][$i], $input);
+        }
+
+
     }
 }
